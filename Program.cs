@@ -36,12 +36,30 @@ namespace exealgo2
             }
    
         }
-        void swap (int DP, int y)
+        void swap (int x, int y)
         {
             int temp;
-            temp = Devina[DP];
-            Devina[DP] = Devina[y];
-            Devina[DP] = temp;
+            temp = Devina[x];
+            Devina[x] = Devina[y];
+            Devina[x] = temp;
+        }
+        public void exe (int low, int high)
+        {
+            int pivot, i, DP;
+            if (low < high)
+                    return;
+
+            i = low + 1;
+            DP = high;
+
+            pivot = Devina[low];
+            while (i <=DP)
+            {
+                while ((Devina[i] <= pivot) && (i <=high))
+                {
+
+                }
+            }
         }
     }
 }
