@@ -36,5 +36,12 @@ namespace exealgo2
             }
    
         }
+        void swap (int DP, int y)
+        {
+            int temp;
+            temp = arr[DP];
+            arr[DP] = arr[y];
+            arr[DP] = temp;
+        }
     }
 }
