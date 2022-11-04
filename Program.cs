@@ -8,7 +8,7 @@ namespace exealgo2
 { 
     class program
     {
-        private int[] arr = new int[33];
+        private int[] Devina = new int[33];
         private int cmp_count = 0;
         private int mov_count = 0;
         private int n;
@@ -32,16 +32,16 @@ namespace exealgo2
             {
                 Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
-                arr[i] = Int32.Parse(s1);
+                Devina[i] = Int32.Parse(s1);
             }
    
         }
         void swap (int DP, int y)
         {
             int temp;
-            temp = arr[DP];
-            arr[DP] = arr[y];
-            arr[DP] = temp;
+            temp = Devina[DP];
+            Devina[DP] = Devina[y];
+            Devina[DP] = temp;
         }
     }
 }
