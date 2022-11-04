@@ -86,7 +86,30 @@ namespace exealgo2
         }
         void display()
         {
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("Sorted array elements ");
+            Console.WriteLine("--------------------------------");
 
+            for (int DP = 0; DP<n; DP++)
+            {
+                Console.WriteLine(Devina[DP]);
+            }
+            Console.WriteLine("\nNumber of comparisson : " + cmp_count);
+            Console.WriteLine("\nNumber of Data  movemenets : " + mov_count);
         }
+        int getSize()
+        {
+            return (n);
+        }
+        static void Main(String[] args)
+        {
+            program myList = new program();
+            myList.input();
+            myList.exe(0, myList.getSize() - 1);
+            myList.display();
+            Console.WriteLine("\n\nPress Enter to exit. ");
+            Console.Read();
+        }
+
     }
 }
