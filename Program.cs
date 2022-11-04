@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,9 +58,35 @@ namespace exealgo2
             {
                 while ((Devina[i] <= pivot) && (i <=high))
                 {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
 
+                while ((Devina[DP] > pivot) && (DP >= low))
+                {
+                    DP--;
+                    cmp_count++;
+                }
+
+                cmp_count++;
+                if (i < DP)
+                {
+                    swap(i, DP);
+                    mov_count++;
                 }
             }
+            if (low < DP)
+            {
+                swap(low, DP);
+                mov_count++;
+            }
+            exe(low, DP - 1);
+            exe(DP + 1, high);
+        }
+        void display()
+        {
+
         }
     }
 }
